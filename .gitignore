@@ -1,0 +1,132 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.ipynb
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Exclude LARGE training data files (but keep deployment files)
+all_patches.hdf5
+ct_tiles.tif
+lung_nodule_classifier_model.h5
+model_checkpoints/
+
+# Exclude training/research scripts (not needed for deployment)
+ablation_study.py
+baseline_comparison.py
+clinical_inference.py
+run_all_experiments.py
+run_training.sh
+run_explainability.sh
+demo_clinical_inference.sh
+main.ipynb
+Explain.ipynb
+
+# Exclude old sample images (use corrected version)
+sample_images/
+
+# Logs and Databases
+*.log
+*.sqlite
+*.db
+logs/
+*.csv.gz
+
+# System Files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Cache
+.cache/
+*.cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.hypothesis/
+coverage.xml
+*.cover
+.cache
+nosetests.xml
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Output directories
+outputs/
+results/
+experiments/
+runs/
+wandb/
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Keep these files (override patterns above)
+!final_novel_attention_model.keras
+!sample_images_corrected/
+!sample_images_corrected/*.npy
+!sample_images_corrected/*.png
+!sample_images_corrected/*.json
+!sample_images_corrected/*.txt

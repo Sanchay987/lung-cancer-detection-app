@@ -1,0 +1,82 @@
+{
+  "benign_001": {
+    "label": 0,
+    "label_name": "benign",
+    "hu_min": -1023.0,
+    "hu_max": 170.0,
+    "hu_mean": -427.174072265625,
+    "original_index": 4463
+  },
+  "benign_002": {
+    "label": 0,
+    "label_name": "benign",
+    "hu_min": -961.0,
+    "hu_max": 1137.0,
+    "hu_mean": -631.300048828125,
+    "original_index": 4069
+  },
+  "benign_003": {
+    "label": 0,
+    "label_name": "benign",
+    "hu_min": -905.0,
+    "hu_max": 305.0,
+    "hu_mean": -388.338134765625,
+    "original_index": 5906
+  },
+  "benign_004": {
+    "label": 0,
+    "label_name": "benign",
+    "hu_min": -992.0,
+    "hu_max": 740.0,
+    "hu_mean": -564.554931640625,
+    "original_index": 4979
+  },
+  "benign_005": {
+    "label": 0,
+    "label_name": "benign",
+    "hu_min": -1024.0,
+    "hu_max": 703.0,
+    "hu_mean": -734.4111328125,
+    "original_index": 5048
+  },
+  "malignant_001": {
+    "label": 1,
+    "label_name": "malignant",
+    "hu_min": -1024.0,
+    "hu_max": 1558.0,
+    "hu_mean": -425.84130859375,
+    "original_index": 1939
+  },
+  "malignant_002": {
+    "label": 1,
+    "label_name": "malignant",
+    "hu_min": -1024.0,
+    "hu_max": 614.0,
+    "hu_mean": -629.633544921875,
+    "original_index": 233
+  },
+  "malignant_003": {
+    "label": 1,
+    "label_name": "malignant",
+    "hu_min": -1007.0,
+    "hu_max": 244.0,
+    "hu_mean": -630.39453125,
+    "original_index": 2291
+  },
+  "malignant_004": {
+    "label": 1,
+    "label_name": "malignant",
+    "hu_min": -1024.0,
+    "hu_max": 497.0,
+    "hu_mean": -610.956787109375,
+    "original_index": 234
+  },
+  "malignant_005": {
+    "label": 1,
+    "label_name": "malignant",
+    "hu_min": -982.0,
+    "hu_max": 626.0,
+    "hu_mean": -461.563232421875,
+    "original_index": 793
+  }
+}
