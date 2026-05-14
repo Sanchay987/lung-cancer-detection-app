@@ -410,17 +410,21 @@ def main():
             "**Purpose**: Analyze CT scans for potential lung cancer using deep learning\n\n"
             "**Technology**: MobileNetV2 + Attention Mechanisms\n\n"
             "**Explainability**: Grad-CAM visualization\n\n"
-            "**Output**: Binary classification with confidence scores"
+            "**Output**: Binary classification with confidence scores\n\n"
+            "**Sample Files**: Check `sample_images_corrected/` directory for test NPY files"
         )
 
         st.markdown("### How to Use")
         st.markdown("""
-        1. **Upload** a CT scan image
+        1. **Upload** a CT scan (NPY format recommended)
         2. **Click** analyze button
         3. **Review** prediction results
         4. **Examine** Grad-CAM heatmap
         5. **Read** detailed analysis
         6. **Download** report
+
+        **⚠️ Note**: Use NPY files for 100% accurate predictions.
+        PNG/JPEG files have ~70% accuracy.
         """)
 
         st.markdown("### Model Information")
@@ -447,6 +451,23 @@ def main():
 
     # File uploader
     st.markdown("---")
+
+    # Important notice about file formats
+    st.markdown("""
+    <div style="background-color: #3d1a1a; padding: 20px; border-radius: 10px; border-left: 5px solid #e74c3c; margin-bottom: 20px;">
+        <h3 style="color: #ffb3b3; margin-top: 0;">⚠️ Important: File Format Accuracy</h3>
+        <p style="color: #fafafa; margin: 10px 0;">
+            <strong>NPY files (Recommended):</strong> 100% accurate predictions - preserves original Hounsfield Unit (HU) values from DICOM CT scans.
+        </p>
+        <p style="color: #fafafa; margin: 10px 0;">
+            <strong>PNG/JPEG files:</strong> ~70% accuracy - HU scale is lost during PNG conversion, leading to approximations that may be incorrect.
+        </p>
+        <p style="color: #a8e6cf; margin: 10px 0; font-weight: 600;">
+            📂 For accurate results, please use NPY files from the <code>sample_images_corrected/</code> directory, or convert your DICOM files to NPY format using <code>extract_samples_corrected.py</code>.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         st.markdown("### Upload CT Scan Image")
@@ -476,7 +497,17 @@ def main():
             else:
                 # Load as image
                 image = Image.open(uploaded_file)
-                st.warning("⚠️ **PNG/JPEG detected**: Results may be less accurate due to HU information loss. For best results, use NPY files from `sample_images_corrected/`")
+                st.error("""
+                ⚠️ **PNG/JPEG file detected - Predictions may be unreliable!**
+
+                PNG/JPEG files lose the original Hounsfield Unit (HU) scale from DICOM CT scans. This can lead to incorrect predictions, even for known malignant cases.
+
+                **For accurate predictions:**
+                - Use NPY files from `sample_images_corrected/` directory (100% accuracy)
+                - Convert your DICOM files to NPY using `extract_samples_corrected.py`
+
+                **Current prediction is an approximation and should not be used for medical decisions.**
+                """)
 
             # Display original image
             st.markdown("---")
