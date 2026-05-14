@@ -1,9 +1,8 @@
 # Streamlit Web Framework
 streamlit>=1.28.0
 
-# Deep Learning Framework
-tensorflow>=2.15.0
-keras>=3.0.0
+# Deep Learning Framework (includes Keras)
+tensorflow>=2.15.0,<2.17.0
 
 # Core Scientific Computing
 numpy>=1.24.0,<2.0.0
