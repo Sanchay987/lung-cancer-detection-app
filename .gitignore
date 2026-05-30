@@ -34,7 +34,7 @@ venv.bak/
 # Jupyter Notebook
 .ipynb_checkpoints/
 *.ipynb_checkpoints
-*.ipynb
+# *.ipynb
 
 # IDE and Editor
 .vscode/
@@ -46,22 +46,22 @@ venv.bak/
 *.sublime-project
 *.sublime-workspace
 
-# Exclude LARGE training data files (but keep deployment files)
-all_patches.hdf5
+# # Exclude LARGE training data files (but keep deployment files)
+# all_patches.hdf5
 ct_tiles.tif
-lung_nodule_classifier_model.h5
+# lung_nodule_classifier_model.h5
 model_checkpoints/
 
-# Exclude training/research scripts (not needed for deployment)
-ablation_study.py
-baseline_comparison.py
-clinical_inference.py
-run_all_experiments.py
-run_training.sh
-run_explainability.sh
-demo_clinical_inference.sh
-main.ipynb
-Explain.ipynb
+# # Exclude training/research scripts (not needed for deployment)
+# ablation_study.py
+# baseline_comparison.py
+# clinical_inference.py
+# run_all_experiments.py
+# run_training.sh
+# run_explainability.sh
+# demo_clinical_inference.sh
+# main.ipynb
+# Explain.ipynb
 
 # Exclude old sample images (use corrected version)
 sample_images/
