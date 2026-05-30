@@ -51,7 +51,6 @@ venv.bak/
 ct_tiles.tif
 # lung_nodule_classifier_model.h5
 model_checkpoints/
-
 # # Exclude training/research scripts (not needed for deployment)
 # ablation_study.py
 # baseline_comparison.py
